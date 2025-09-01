@@ -1,0 +1,131 @@
+[gd_scene load_steps=15 format=3 uid="uid://bq38njlfdjpcn"]
+
+[ext_resource type="FontFile" uid="uid://2cx1podjoa4n" path="res://Textures/UI/Clash_Regular.otf" id="1_6lnsg"]
+[ext_resource type="Script" path="res://Scenes/Scroll.gd" id="2_rug74"]
+[ext_resource type="Script" path="res://Scenes/Reset.gd" id="3_v4o1u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dnwxn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmvdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wft1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3mnem"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2n4c7"]
+
+[sub_resource type="Theme" id="Theme_6js6v"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_dnwxn")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_lmvdf")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_wft1t")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_3mnem")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_2n4c7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwyfi"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50kan"]
+bg_color = Color(0, 0.425328, 0.81082, 1)
+border_width_top = 55
+border_color = Color(0.298647, 0.620391, 0.999997, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+shadow_color = Color(0.588644, 0.69601, 1, 1)
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_8v8vw"]
+font = ExtResource("1_6lnsg")
+font_size = 75
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va1qr"]
+bg_color = Color(0.809667, 0, 0.16762, 1)
+border_width_top = 55
+border_color = Color(1, 0.357104, 0.448828, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+shadow_color = Color(1, 0.482331, 0.513638, 1)
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_7m2ny"]
+font = ExtResource("1_6lnsg")
+font_size = 40
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Settings" type="Node2D"]
+
+[node name="Settings" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(970, 2200)
+offset_left = 50.0
+offset_right = 1056.0
+offset_bottom = 2200.0
+theme = SubResource("Theme_6js6v")
+script = ExtResource("2_rug74")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+custom_minimum_size = Vector2(970, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="ProgressBar" type="ProgressBar" parent="Settings/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(900, 122.54)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_xwyfi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_50kan")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/MarginContainer/ProgressBar"]
+layout_mode = 2
+offset_top = 26.0
+offset_right = 920.0
+offset_bottom = 101.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_8v8vw")
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Settings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 160
+theme_override_constants/margin_bottom = 0
+script = ExtResource("3_v4o1u")
+
+[node name="ProgressBar" type="ProgressBar" parent="Settings/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(10, 86.04)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_xwyfi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_va1qr")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer/MarginContainer2/ProgressBar"]
+layout_mode = 2
+offset_top = 26.0
+offset_right = 662.0
+offset_bottom = 101.0
+mouse_filter = 1
+text = "Reset Game"
+label_settings = SubResource("LabelSettings_7m2ny")
+horizontal_alignment = 1

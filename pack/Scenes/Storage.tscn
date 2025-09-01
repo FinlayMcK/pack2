@@ -1,0 +1,184 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8bfp8od2h1h7"]
+
+[ext_resource type="Script" path="res://Scenes/storage.gd" id="1_65cqm"]
+[ext_resource type="Script" path="res://Scenes/Scroll.gd" id="2_2cqng"]
+[ext_resource type="FontFile" uid="uid://2cx1podjoa4n" path="res://Textures/UI/Clash_Regular.otf" id="2_27nfb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0de24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44mio"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wp1a4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fgc00"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_er6ng"]
+
+[sub_resource type="Theme" id="Theme_smwq5"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_0de24")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_44mio")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_wp1a4")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_fgc00")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_er6ng")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymeyd"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxk2l"]
+bg_color = Color(0, 0.425328, 0.81082, 1)
+border_width_top = 55
+border_color = Color(0.298647, 0.620391, 0.999997, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+shadow_color = Color(0.588644, 0.69601, 1, 1)
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_blyos"]
+font = ExtResource("2_27nfb")
+font_size = 75
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3uc2"]
+font = ExtResource("2_27nfb")
+font_size = 30
+font_color = Color(0.753984, 0.753984, 0.753984, 1)
+
+[node name="Storage" type="Node2D"]
+script = ExtResource("1_65cqm")
+
+[node name="Cards" type="ScrollContainer" parent="."]
+clip_contents = false
+custom_minimum_size = Vector2(970, 2200)
+offset_left = 50.0
+offset_right = 1056.0
+offset_bottom = 2200.0
+theme = SubResource("Theme_smwq5")
+script = ExtResource("2_2cqng")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Cards"]
+custom_minimum_size = Vector2(970, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Cards/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="ProgressBar" type="ProgressBar" parent="Cards/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(900, 122.54)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ymeyd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yxk2l")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Cards/VBoxContainer/MarginContainer/ProgressBar"]
+layout_mode = 2
+offset_top = 26.0
+offset_right = 920.0
+offset_bottom = 101.0
+text = "Collection"
+label_settings = SubResource("LabelSettings_blyos")
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Cards/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Cards/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Cards/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="Cards/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Cards/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Found
+"
+label_settings = SubResource("LabelSettings_l3uc2")
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Cards/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="ProgressBar" type="ProgressBar" parent="Cards/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="MarginContainer3" type="MarginContainer" parent="Cards/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 800
+
+[node name="GridContainer" type="GridContainer" parent="Cards/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 400
+columns = 4
+
+[node name="MarginContainer4" type="MarginContainer" parent="Cards/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Cards/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Cards/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Cards/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Cards/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+text = "Not Found"
+label_settings = SubResource("LabelSettings_l3uc2")
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Cards/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Cards/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="MarginContainer5" type="MarginContainer" parent="Cards/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 800
+
+[node name="GridContainer" type="GridContainer" parent="Cards/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 50
+columns = 3

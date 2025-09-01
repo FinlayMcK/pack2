@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=3 uid="uid://0g624jw4t4mt"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_hnf8a"]
+[ext_resource type="Texture2D" uid="uid://bcnq08mjlwb5w" path="res://Textures/UI/background.png" id="1_plte8"]
+[ext_resource type="StyleBox" uid="uid://d0g7a6wfxtknp" path="res://Textures/UI/new_style_box_texture.tres" id="2_fot3r"]
+[ext_resource type="Texture2D" uid="uid://bnuhbh080npi7" path="res://Textures/UI/Cards.png" id="3_tv11k"]
+[ext_resource type="Texture2D" uid="uid://bhmeywmpaml45" path="res://Textures/UI/Pack.png" id="4_yvneg"]
+[ext_resource type="Texture2D" uid="uid://bi48tr7vife1h" path="res://Textures/UI/Settings.png" id="5_0kuen"]
+[ext_resource type="PackedScene" uid="uid://dja8i6uxr3i7w" path="res://Scenes/Peel.tscn" id="6_3qjk3"]
+[ext_resource type="PackedScene" uid="uid://c8bfp8od2h1h7" path="res://Scenes/Storage.tscn" id="8_j8qif"]
+[ext_resource type="PackedScene" uid="uid://bq38njlfdjpcn" path="res://Scenes/Settings.tscn" id="9_xwvt4"]
+
+[sub_resource type="Gradient" id="Gradient_u1khy"]
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.639216)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_svj6k"]
+gradient = SubResource("Gradient_u1khy")
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.5, 0)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hnf8a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.5708
+anchor_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 2392.0
+texture = ExtResource("1_plte8")
+
+[node name="Pages" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Storage" parent="Pages" instance=ExtResource("8_j8qif")]
+position = Vector2(-1196, 0)
+
+[node name="Peel" parent="Pages" instance=ExtResource("6_3qjk3")]
+
+[node name="Settings" parent="Pages" instance=ExtResource("9_xwvt4")]
+position = Vector2(1196, 0)
+
+[node name="Shadow Top" type="TextureRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 179.0
+texture = SubResource("GradientTexture2D_svj6k")
+
+[node name="Shadow Bottom" type="TextureRect" parent="."]
+offset_left = 1080.0
+offset_top = 2195.46
+offset_right = 2160.0
+offset_bottom = 2374.46
+rotation = 3.14159
+texture = SubResource("GradientTexture2D_svj6k")
+
+[node name="NavBar" type="Control" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 2392.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavBar"]
+layout_mode = 0
+offset_top = 2191.0
+offset_right = 1080.0
+offset_bottom = 2392.0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Cards" type="PanelContainer" parent="NavBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_fot3r")
+
+[node name="CenterContainer" type="CenterContainer" parent="NavBar/HBoxContainer/Cards"]
+layout_mode = 2
+
+[node name="Storage" type="TextureButton" parent="NavBar/HBoxContainer/Cards/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("3_tv11k")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Peel" type="PanelContainer" parent="NavBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_fot3r")
+
+[node name="CenterContainer" type="CenterContainer" parent="NavBar/HBoxContainer/Peel"]
+layout_mode = 2
+
+[node name="Peel" type="TextureButton" parent="NavBar/HBoxContainer/Peel/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("4_yvneg")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Settings" type="PanelContainer" parent="NavBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_fot3r")
+
+[node name="CenterContainer" type="CenterContainer" parent="NavBar/HBoxContainer/Settings"]
+layout_mode = 2
+
+[node name="Settings" type="TextureButton" parent="NavBar/HBoxContainer/Settings/CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+texture_normal = ExtResource("5_0kuen")
+ignore_texture_size = true
+stretch_mode = 6
+
+[connection signal="button_up" from="NavBar/HBoxContainer/Cards/CenterContainer/Storage" to="." method="_on_storage_button_up"]
+[connection signal="button_up" from="NavBar/HBoxContainer/Peel/CenterContainer/Peel" to="." method="_on_peel_button_up"]
+[connection signal="button_up" from="NavBar/HBoxContainer/Settings/CenterContainer/Settings" to="." method="_on_settings_button_up"]

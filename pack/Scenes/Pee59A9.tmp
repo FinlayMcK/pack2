@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dja8i6uxr3i7w"]
+
+[ext_resource type="Texture2D" uid="uid://bmpifbwpf4en8" path="res://Textures/Test.png" id="1_c4jwp"]
+[ext_resource type="Texture2D" uid="uid://bbxa4oou7y55i" path="res://Textures/Cards/Common/Arrows.png" id="1_lhpt5"]
+[ext_resource type="Script" path="res://Scenes/Peel.gd" id="2_k0bto"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q3lw3"]
+
+[sub_resource type="Gradient" id="Gradient_ocvsq"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l4xtg"]
+gradient = SubResource("Gradient_ocvsq")
+width = 1
+
+[sub_resource type="Gradient" id="Gradient_0b21f"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dx3ys"]
+gradient = SubResource("Gradient_0b21f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5tfh"]
+
+[node name="Peel" type="Node2D"]
+texture_filter = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_top = 747.595
+offset_right = 466.035
+offset_bottom = 1169.52
+scale = Vector2(2.345, 2.345)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+texture_filter = 2
+layout_mode = 2
+texture = ExtResource("1_lhpt5")
+stretch_mode = 3
+
+[node name="Shine" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_q3lw3")
+position = Vector2(543, 744.32)
+scale = Vector2(2.5, 0.576)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(540, 1192)
+texture = ExtResource("1_c4jwp")
+hframes = 11
+vframes = 6
+frame = 59
+region_filter_clip_enabled = true
+script = ExtResource("2_k0bto")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 393.0
+offset_top = 679.0
+offset_right = 882.0
+offset_bottom = 840.0
+theme_override_icons/grabber = SubResource("GradientTexture1D_l4xtg")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture1D_dx3ys")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_g5tfh")
+min_value = 18.0
+max_value = 59.0
+value = 59.0
+
+[connection signal="value_changed" from="HSlider" to="Sprite2D" method="_on_h_slider_value_changed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8bfp8od2h1h7"]
+
+[ext_resource type="Script" path="res://Scenes/storage.gd" id="1_65cqm"]
+[ext_resource type="Script" path="res://Scenes/Scroll.gd" id="2_2cqng"]
+
+[node name="Storage" type="Node2D"]
+script = ExtResource("1_65cqm")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(1080, 2200)
+offset_left = 50.0
+offset_right = 1130.0
+offset_bottom = 2200.0
+script = ExtResource("2_2cqng")
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 400
+columns = 4

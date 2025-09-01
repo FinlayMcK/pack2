@@ -1,0 +1,904 @@
+[gd_resource type="Resource" script_class="CardList" load_steps=227 format=3 uid="uid://b6245lmttowt0"]
+
+[ext_resource type="Script" path="res://Textures/CardData.gd" id="1_0g7tm"]
+[ext_resource type="Script" path="res://Textures/CardList.gd" id="1_mfrui"]
+[ext_resource type="Texture2D" uid="uid://doy5vs0bui4s2" path="res://Textures/Cards/Common/1/Electro_Sprit.png" id="2_vsld5"]
+[ext_resource type="Texture2D" uid="uid://c68k1sakt8rwi" path="res://Textures/Cards/Common/1/Fire Spirit.png" id="3_52dek"]
+[ext_resource type="Texture2D" uid="uid://br08y53t3pf4" path="res://Textures/Cards/Common/1/Ice Spirit.png" id="4_qk1ap"]
+[ext_resource type="Texture2D" uid="uid://cq3ljbf3nx5n3" path="res://Textures/Cards/Common/1/Skeletons.png" id="5_h64ll"]
+[ext_resource type="Texture2D" uid="uid://csuu0btrwujq5" path="res://Textures/Cards/Common/2/Bats.png" id="6_jcuq8"]
+[ext_resource type="Texture2D" uid="uid://chq38l84rhasa" path="res://Textures/Cards/Common/2/Bomber.png" id="7_m0bqv"]
+[ext_resource type="Texture2D" uid="uid://bqgpv8br0s7rc" path="res://Textures/Cards/Common/2/Goblin.png" id="8_jowiy"]
+[ext_resource type="Texture2D" uid="uid://dhufxbgwchtuw" path="res://Textures/Cards/Common/2/Snowball.png" id="9_fp0m4"]
+[ext_resource type="Texture2D" uid="uid://cacxdvwfd4cxm" path="res://Textures/Cards/Common/2/Spear Goblins.png" id="10_uwe5k"]
+[ext_resource type="Texture2D" uid="uid://s68okq3bilbh" path="res://Textures/Cards/Common/2/Zap.png" id="11_2t1of"]
+[ext_resource type="Texture2D" uid="uid://d141loo6dk6tq" path="res://Textures/Cards/Common/3/Archers.png" id="12_ansja"]
+[ext_resource type="Texture2D" uid="uid://bbxa4oou7y55i" path="res://Textures/Cards/Common/3/Arrows.png" id="13_f73pt"]
+[ext_resource type="Texture2D" uid="uid://oslufgn01l8h" path="res://Textures/Cards/Common/3/Cannon.png" id="14_y5ffn"]
+[ext_resource type="Texture2D" uid="uid://bgnpgocj3p12" path="res://Textures/Cards/Common/3/Firecracker.png" id="15_df4k2"]
+[ext_resource type="Texture2D" uid="uid://cpmqlcnrfwnia" path="res://Textures/Cards/Common/3/Goblin Gang.png" id="16_xehme"]
+[ext_resource type="Texture2D" uid="uid://chf2qm1a33yq7" path="res://Textures/Cards/Common/3/Knight.png" id="17_oyhxi"]
+[ext_resource type="Texture2D" uid="uid://br7w5o0srgsjk" path="res://Textures/Cards/Common/3/Minion.png" id="18_mcf06"]
+[ext_resource type="Texture2D" uid="uid://7jh0caalfip4" path="res://Textures/Cards/Common/3/Royal Delivery.png" id="19_vbjli"]
+[ext_resource type="Texture2D" uid="uid://boowgx20eg6pu" path="res://Textures/Cards/Common/3/Skeleton Barrel.png" id="20_kmi7e"]
+[ext_resource type="Texture2D" uid="uid://4n23dfg4gwap" path="res://Textures/Cards/Common/4/Mortar.png" id="21_d5k3y"]
+[ext_resource type="Texture2D" uid="uid://ct7f1qs6beolt" path="res://Textures/Cards/Common/4/Skeleton Dragons.png" id="22_srnjb"]
+[ext_resource type="Texture2D" uid="uid://bvlclopwojwi0" path="res://Textures/Cards/Common/4/Tesla.png" id="23_s5jbj"]
+[ext_resource type="Texture2D" uid="uid://dprlf8hvikkq" path="res://Textures/Cards/Common/5/Barbarians.png" id="24_07jua"]
+[ext_resource type="Texture2D" uid="uid://h0xqsg5lkhpl" path="res://Textures/Cards/Common/5/Minion_Horde.png" id="25_r6244"]
+[ext_resource type="Texture2D" uid="uid://c7cuqephn8ufr" path="res://Textures/Cards/Common/5/Rascals.png" id="26_6njf7"]
+[ext_resource type="Texture2D" uid="uid://drkf7u7j5iumr" path="res://Textures/Cards/Common/6/Elite Barbarians.png" id="27_etord"]
+[ext_resource type="Texture2D" uid="uid://dlrujqetx1ws6" path="res://Textures/Cards/Common/7/Royale Recruits.png" id="28_wd1n3"]
+[ext_resource type="Texture2D" uid="uid://78rivuymgkrk" path="res://Textures/Cards/Rare/1/Heal Spirit.png" id="29_fpw3h"]
+[ext_resource type="Texture2D" uid="uid://c55es2qtvtsy4" path="res://Textures/Cards/Rare/2/Ice Golem.png" id="30_1hae1"]
+[ext_resource type="Texture2D" uid="uid://bku2tk67p3amd" path="res://Textures/Cards/Rare/3/Dart Goblin.png" id="31_tftuo"]
+[ext_resource type="Texture2D" uid="uid://bw6f8i7uadvgb" path="res://Textures/Cards/Rare/3/Earthquake.png" id="32_8askm"]
+[ext_resource type="Texture2D" uid="uid://s1vp5blnmqm1" path="res://Textures/Cards/Rare/3/Elixir Golem.png" id="33_dkw6q"]
+[ext_resource type="Texture2D" uid="uid://nhqqm5mggqvp" path="res://Textures/Cards/Rare/3/Mega Minion.png" id="34_feym3"]
+[ext_resource type="Texture2D" uid="uid://b5tml6a8y4hkm" path="res://Textures/Cards/Rare/3/Tombstone.png" id="35_r8ln3"]
+[ext_resource type="Texture2D" uid="uid://gj12hkuxxip7" path="res://Textures/Cards/Rare/4/Battle Healer.png" id="36_0vsrx"]
+[ext_resource type="Texture2D" uid="uid://bxgxoi1h7bi63" path="res://Textures/Cards/Rare/4/Battle Ram.png" id="37_l2o4l"]
+[ext_resource type="Texture2D" uid="uid://byfh2e2urwtog" path="res://Textures/Cards/Rare/4/Bomb Tower.png" id="38_dgtdi"]
+[ext_resource type="Texture2D" uid="uid://bw2520fr2qkok" path="res://Textures/Cards/Rare/4/Fireball.png" id="39_244wl"]
+[ext_resource type="Texture2D" uid="uid://c12jsdnxhv0d4" path="res://Textures/Cards/Rare/4/Flying Machine.png" id="40_o6uky"]
+[ext_resource type="Texture2D" uid="uid://r1nccqshtwak" path="res://Textures/Cards/Rare/4/Goblin Cage.png" id="41_8uxxq"]
+[ext_resource type="Texture2D" uid="uid://t4n2eq5xx3tc" path="res://Textures/Cards/Rare/4/Goblin Hut.png" id="42_foywv"]
+[ext_resource type="Texture2D" uid="uid://lxle3b5f8x2j" path="res://Textures/Cards/Rare/4/Hog Rider.png" id="43_sokac"]
+[ext_resource type="Texture2D" uid="uid://db7kv0rly76qr" path="res://Textures/Cards/Rare/4/Mini PEKKA.png" id="44_dg280"]
+[ext_resource type="Texture2D" uid="uid://c5vt0mqdyuh2d" path="res://Textures/Cards/Rare/4/Musketeer.png" id="45_a2ppn"]
+[ext_resource type="Texture2D" uid="uid://bl3206bdi06ho" path="res://Textures/Cards/Rare/4/Valkyrie.png" id="46_c41tg"]
+[ext_resource type="Texture2D" uid="uid://ln6idkb2ekcj" path="res://Textures/Cards/Rare/4/Zappies.png" id="47_55p8i"]
+[ext_resource type="Texture2D" uid="uid://do0gm3rnsna22" path="res://Textures/Cards/Rare/5/Giant.png" id="48_31s7d"]
+[ext_resource type="Texture2D" uid="uid://b5s8tw24hgbvp" path="res://Textures/Cards/Rare/5/Inferno Tower.png" id="49_g2olq"]
+[ext_resource type="Texture2D" uid="uid://bk0mhpq6qpfb7" path="res://Textures/Cards/Rare/5/Royal Hogs.png" id="50_46p8d"]
+[ext_resource type="Texture2D" uid="uid://cd3oupic3xwt2" path="res://Textures/Cards/Rare/5/Wizard.png" id="51_w500q"]
+[ext_resource type="Texture2D" uid="uid://8vmgyanq1h1o" path="res://Textures/Cards/Rare/6/Barbarian Hut.png" id="52_i3bmx"]
+[ext_resource type="Texture2D" uid="uid://d4e5yu7th1v8a" path="res://Textures/Cards/Rare/6/Elixir Collector.png" id="53_n21q3"]
+[ext_resource type="Texture2D" uid="uid://6ojnedhvk27q" path="res://Textures/Cards/Rare/6/Rocket.png" id="54_gnoci"]
+[ext_resource type="Texture2D" uid="uid://briw1c1e8so65" path="res://Textures/Cards/Rare/9/Three Musketeers.png" id="55_26f3x"]
+[ext_resource type="Texture2D" uid="uid://t6gbkjj0wi5b" path="res://Textures/Cards/Epic/2/Barbarian Barrel.png" id="56_qb7ln"]
+[ext_resource type="Texture2D" uid="uid://c21jx72dhe5s3" path="res://Textures/Cards/Epic/2/Rage.png" id="57_mohhp"]
+[ext_resource type="Texture2D" uid="uid://cbcq3rm0focr" path="res://Textures/Cards/Epic/2/Wall Breakers.png" id="58_hq48d"]
+[ext_resource type="Texture2D" uid="uid://bt14qwl6mi7jo" path="res://Textures/Cards/Epic/3/Clone.png" id="59_isy27"]
+[ext_resource type="Texture2D" uid="uid://u7pim0s2rkfe" path="res://Textures/Cards/Epic/3/Giards.png" id="60_04io6"]
+[ext_resource type="Texture2D" uid="uid://idfc5fcq56q6" path="res://Textures/Cards/Epic/3/Goblin Barrel.png" id="61_byh4y"]
+[ext_resource type="Texture2D" uid="uid://xh700rmuefw3" path="res://Textures/Cards/Epic/3/Skeleton Army.png" id="62_ba3p3"]
+[ext_resource type="Texture2D" uid="uid://1pjxlyrjqu2i" path="res://Textures/Cards/Epic/3/Tornado.png" id="63_6o2a7"]
+[ext_resource type="Texture2D" uid="uid://dr36m2cosqh3m" path="res://Textures/Cards/Epic/4/Baby Dragon.png" id="64_jhwuh"]
+[ext_resource type="Texture2D" uid="uid://cfb10oxvrba86" path="res://Textures/Cards/Epic/4/Dark Prince.png" id="65_7on8r"]
+[ext_resource type="Texture2D" uid="uid://hffg2bcylg26" path="res://Textures/Cards/Epic/4/Freeze.png" id="66_ukch8"]
+[ext_resource type="Texture2D" uid="uid://026tj4yv6lwd" path="res://Textures/Cards/Epic/4/Goblin Drill.png" id="67_a8ape"]
+[ext_resource type="Texture2D" uid="uid://bg8k6u7fqu753" path="res://Textures/Cards/Epic/4/Hunter.png" id="68_w14ng"]
+[ext_resource type="Texture2D" uid="uid://cqbxa5ibgutbc" path="res://Textures/Cards/Epic/4/Poison.png" id="69_6evoe"]
+[ext_resource type="Texture2D" uid="uid://bpixduhl1wbg0" path="res://Textures/Cards/Epic/5/Balloon.png" id="70_urld2"]
+[ext_resource type="Texture2D" uid="uid://dwoykt0bbdg2e" path="res://Textures/Cards/Epic/5/Bowler.png" id="71_ax6fr"]
+[ext_resource type="Texture2D" uid="uid://dsi415io58pon" path="res://Textures/Cards/Epic/5/Cannon Cart.png" id="72_t24kn"]
+[ext_resource type="Texture2D" uid="uid://dto5c8vf273ax" path="res://Textures/Cards/Epic/5/Electro Dragon.png" id="73_sern4"]
+[ext_resource type="Texture2D" uid="uid://dfgk2ol3p7r63" path="res://Textures/Cards/Epic/5/Executioner.png" id="74_yai1j"]
+[ext_resource type="Texture2D" uid="uid://d2bwxlcu2obic" path="res://Textures/Cards/Epic/5/Prince.png" id="75_tesul"]
+[ext_resource type="Texture2D" uid="uid://btbih4kg2pd3p" path="res://Textures/Cards/Epic/5/Witch.png" id="76_gj0wo"]
+[ext_resource type="Texture2D" uid="uid://dqh1huugr48lw" path="res://Textures/Cards/Epic/6/Giant Bomber.png" id="77_afd2v"]
+[ext_resource type="Texture2D" uid="uid://bxj2l17fvkelu" path="res://Textures/Cards/Epic/6/Goblin Giant.png" id="78_p3yu2"]
+[ext_resource type="Texture2D" uid="uid://bwqpsrat0uyv" path="res://Textures/Cards/Epic/6/Lightning.png" id="79_16f40"]
+[ext_resource type="Texture2D" uid="uid://cfef5j41miyku" path="res://Textures/Cards/Epic/6/x-bow.png" id="80_kutu2"]
+[ext_resource type="Texture2D" uid="uid://bm7kvw4dj4mny" path="res://Textures/Cards/Epic/7/Electro Giant.png" id="81_lmt34"]
+[ext_resource type="Texture2D" uid="uid://bruavxbw8cga3" path="res://Textures/Cards/Epic/7/PEKKA.png" id="82_jwcbq"]
+[ext_resource type="Texture2D" uid="uid://dj7ybw6op75c0" path="res://Textures/Cards/Epic/8/Golem.png" id="83_ot0eu"]
+[ext_resource type="Texture2D" uid="uid://cfviyf068bmkj" path="res://Textures/Cards/Legendary/2/Hog Rider Santa.png" id="84_6fbq8"]
+[ext_resource type="Texture2D" uid="uid://d0qr8qa1jk8p1" path="res://Textures/Cards/Legendary/2/Ice Golem Super.png" id="85_ycaw7"]
+[ext_resource type="Texture2D" uid="uid://ds3kai234i1gk" path="res://Textures/Cards/Legendary/2/The Log.png" id="86_li1od"]
+[ext_resource type="Texture2D" uid="uid://bssc15jtlvyuy" path="res://Textures/Cards/Legendary/3/Bandit.png" id="87_sl05f"]
+[ext_resource type="Texture2D" uid="uid://rlk3xkv2ocjj" path="res://Textures/Cards/Legendary/3/Fisherman.png" id="88_1vdl3"]
+[ext_resource type="Texture2D" uid="uid://bf8svxq4emi3r" path="res://Textures/Cards/Legendary/3/Ice Wizard.png" id="89_gulp8"]
+[ext_resource type="Texture2D" uid="uid://x005fdbel6ac" path="res://Textures/Cards/Legendary/3/Miner.png" id="90_63adg"]
+[ext_resource type="Texture2D" uid="uid://tl0stcwlkiwk" path="res://Textures/Cards/Legendary/3/Princess.png" id="91_hmat1"]
+[ext_resource type="Texture2D" uid="uid://cje753mxe3xby" path="res://Textures/Cards/Legendary/3/Royal Ghost.png" id="92_ux3bn"]
+[ext_resource type="Texture2D" uid="uid://de4bx0kogkacf" path="res://Textures/Cards/Legendary/4/Electro Wizard.png" id="93_8igmq"]
+[ext_resource type="Texture2D" uid="uid://cw0dckre5ncjx" path="res://Textures/Cards/Legendary/4/Inferno Dragon.png" id="94_tsg38"]
+[ext_resource type="Texture2D" uid="uid://dctow7ot3hssy" path="res://Textures/Cards/Legendary/4/Lumberjack.png" id="95_n4psl"]
+[ext_resource type="Texture2D" uid="uid://dsjws7tirmi1e" path="res://Textures/Cards/Legendary/4/Magic Archer Super.png" id="96_qsh7l"]
+[ext_resource type="Texture2D" uid="uid://ca8sh4gyyvgp6" path="res://Textures/Cards/Legendary/4/Magic Archer.png" id="97_c6xm8"]
+[ext_resource type="Texture2D" uid="uid://bjapmpsb1ysdi" path="res://Textures/Cards/Legendary/4/Mini PEKKA Super.png" id="98_x0hyd"]
+[ext_resource type="Texture2D" uid="uid://dhqq7stolhpan" path="res://Textures/Cards/Legendary/4/Mother Witch.png" id="99_h1vd3"]
+[ext_resource type="Texture2D" uid="uid://dne2hc3ey3hwv" path="res://Textures/Cards/Legendary/4/Night Witch.png" id="100_ctj6h"]
+[ext_resource type="Texture2D" uid="uid://ctcanqhxc51yq" path="res://Textures/Cards/Legendary/5/Graveyard.png" id="101_3d8l8"]
+[ext_resource type="Texture2D" uid="uid://b4yftcijf6a1k" path="res://Textures/Cards/Legendary/5/Ram Rider.png" id="102_2bcef"]
+[ext_resource type="Texture2D" uid="uid://dr6asbjf5l08r" path="res://Textures/Cards/Legendary/6/Sparky.png" id="103_77olj"]
+[ext_resource type="Texture2D" uid="uid://cdrdmslrsc82w" path="res://Textures/Cards/Legendary/7/Lava Hound.png" id="104_sxfeu"]
+[ext_resource type="Texture2D" uid="uid://b2ad6fttn7nln" path="res://Textures/Cards/Legendary/7/Mega Knight.png" id="105_5dorc"]
+[ext_resource type="Texture2D" uid="uid://u7fjblebw0nl" path="res://Textures/Cards/Champion/3/Little_Prince.png" id="106_3m7qh"]
+[ext_resource type="Texture2D" uid="uid://bm6bje5psbqpf" path="res://Textures/Cards/Champion/4/Golden Knight.png" id="107_b86dp"]
+[ext_resource type="Texture2D" uid="uid://cd5i27netm58" path="res://Textures/Cards/Champion/4/Mighty Miner.png" id="108_ifj7e"]
+[ext_resource type="Texture2D" uid="uid://dcbkhoneb4h75" path="res://Textures/Cards/Champion/4/Skeleton King.png" id="109_8k47j"]
+[ext_resource type="Texture2D" uid="uid://drtpkbhi6pjy1" path="res://Textures/Cards/Champion/5/Archer Queen.png" id="110_poonn"]
+[ext_resource type="Texture2D" uid="uid://chhrm47s53jo7" path="res://Textures/Cards/Champion/5/Goblinstein.png" id="111_ea3o2"]
+[ext_resource type="Texture2D" uid="uid://bb3dclh5cm05a" path="res://Textures/Cards/Champion/5/Monk.png" id="112_gvyl7"]
+[ext_resource type="Texture2D" uid="uid://6ci4u6xcmefh" path="res://Textures/Cards/Champion/6/Boss_Bandit.png" id="113_chxeh"]
+
+[sub_resource type="Resource" id="Resource_icsej"]
+script = ExtResource("1_0g7tm")
+id = "Electro_Sprit"
+rarity = "Common"
+image = ExtResource("2_vsld5")
+elixir = "1"
+
+[sub_resource type="Resource" id="Resource_oa02x"]
+script = ExtResource("1_0g7tm")
+id = "Fire Spirit"
+rarity = "Common"
+image = ExtResource("3_52dek")
+elixir = "1"
+
+[sub_resource type="Resource" id="Resource_lyicf"]
+script = ExtResource("1_0g7tm")
+id = "Ice Spirit"
+rarity = "Common"
+image = ExtResource("4_qk1ap")
+elixir = "1"
+
+[sub_resource type="Resource" id="Resource_dd6ro"]
+script = ExtResource("1_0g7tm")
+id = "Skeletons"
+rarity = "Common"
+image = ExtResource("5_h64ll")
+elixir = "1"
+
+[sub_resource type="Resource" id="Resource_6453q"]
+script = ExtResource("1_0g7tm")
+id = "Bats"
+rarity = "Common"
+image = ExtResource("6_jcuq8")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_cchol"]
+script = ExtResource("1_0g7tm")
+id = "Bomber"
+rarity = "Common"
+image = ExtResource("7_m0bqv")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_opt76"]
+script = ExtResource("1_0g7tm")
+id = "Goblin"
+rarity = "Common"
+image = ExtResource("8_jowiy")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_p2jlo"]
+script = ExtResource("1_0g7tm")
+id = "Snowball"
+rarity = "Common"
+image = ExtResource("9_fp0m4")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_apai1"]
+script = ExtResource("1_0g7tm")
+id = "Spear Goblins"
+rarity = "Common"
+image = ExtResource("10_uwe5k")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_ucick"]
+script = ExtResource("1_0g7tm")
+id = "Zap"
+rarity = "Common"
+image = ExtResource("11_2t1of")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_s3nf7"]
+script = ExtResource("1_0g7tm")
+id = "Archers"
+rarity = "Common"
+image = ExtResource("12_ansja")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_n45es"]
+script = ExtResource("1_0g7tm")
+id = "Arrows"
+rarity = "Common"
+image = ExtResource("13_f73pt")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_lea74"]
+script = ExtResource("1_0g7tm")
+id = "Cannon"
+rarity = "Common"
+image = ExtResource("14_y5ffn")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_r7prr"]
+script = ExtResource("1_0g7tm")
+id = "Firecracker"
+rarity = "Common"
+image = ExtResource("15_df4k2")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_7036s"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Gang"
+rarity = "Common"
+image = ExtResource("16_xehme")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_fykmi"]
+script = ExtResource("1_0g7tm")
+id = "Knight"
+rarity = "Common"
+image = ExtResource("17_oyhxi")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_fnfkb"]
+script = ExtResource("1_0g7tm")
+id = "Minion"
+rarity = "Common"
+image = ExtResource("18_mcf06")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_dna3p"]
+script = ExtResource("1_0g7tm")
+id = "Royal Delivery"
+rarity = "Common"
+image = ExtResource("19_vbjli")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_3730u"]
+script = ExtResource("1_0g7tm")
+id = "Skeleton Barrel"
+rarity = "Common"
+image = ExtResource("20_kmi7e")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_rw4uv"]
+script = ExtResource("1_0g7tm")
+id = "Mortar"
+rarity = "Common"
+image = ExtResource("21_d5k3y")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_w2hi2"]
+script = ExtResource("1_0g7tm")
+id = "Skeleton Dragons"
+rarity = "Common"
+image = ExtResource("22_srnjb")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_g0nok"]
+script = ExtResource("1_0g7tm")
+id = "Tesla"
+rarity = "Common"
+image = ExtResource("23_s5jbj")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_thksj"]
+script = ExtResource("1_0g7tm")
+id = "Barbarians"
+rarity = "Common"
+image = ExtResource("24_07jua")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_wwig0"]
+script = ExtResource("1_0g7tm")
+id = "Minion_Horde"
+rarity = "Common"
+image = ExtResource("25_r6244")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_ei1d1"]
+script = ExtResource("1_0g7tm")
+id = "Rascals"
+rarity = "Common"
+image = ExtResource("26_6njf7")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_wbuf5"]
+script = ExtResource("1_0g7tm")
+id = "Elite Barbarians"
+rarity = "Common"
+image = ExtResource("27_etord")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_tdpwq"]
+script = ExtResource("1_0g7tm")
+id = "Royale Recruits"
+rarity = "Common"
+image = ExtResource("28_wd1n3")
+elixir = "7"
+
+[sub_resource type="Resource" id="Resource_fijbu"]
+script = ExtResource("1_0g7tm")
+id = "Heal Spirit"
+rarity = "Rare"
+image = ExtResource("29_fpw3h")
+elixir = "1"
+
+[sub_resource type="Resource" id="Resource_npgkl"]
+script = ExtResource("1_0g7tm")
+id = "Ice Golem"
+rarity = "Rare"
+image = ExtResource("30_1hae1")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_im7y2"]
+script = ExtResource("1_0g7tm")
+id = "Dart Goblin"
+rarity = "Rare"
+image = ExtResource("31_tftuo")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_njkqe"]
+script = ExtResource("1_0g7tm")
+id = "Earthquake"
+rarity = "Rare"
+image = ExtResource("32_8askm")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_qa2b7"]
+script = ExtResource("1_0g7tm")
+id = "Elixir Golem"
+rarity = "Rare"
+image = ExtResource("33_dkw6q")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_jedvn"]
+script = ExtResource("1_0g7tm")
+id = "Mega Minion"
+rarity = "Rare"
+image = ExtResource("34_feym3")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_462fi"]
+script = ExtResource("1_0g7tm")
+id = "Tombstone"
+rarity = "Rare"
+image = ExtResource("35_r8ln3")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_lttra"]
+script = ExtResource("1_0g7tm")
+id = "Battle Healer"
+rarity = "Rare"
+image = ExtResource("36_0vsrx")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_h3fdx"]
+script = ExtResource("1_0g7tm")
+id = "Battle Ram"
+rarity = "Rare"
+image = ExtResource("37_l2o4l")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_b16k1"]
+script = ExtResource("1_0g7tm")
+id = "Bomb Tower"
+rarity = "Rare"
+image = ExtResource("38_dgtdi")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_d8ojj"]
+script = ExtResource("1_0g7tm")
+id = "Fireball"
+rarity = "Rare"
+image = ExtResource("39_244wl")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_uqdrn"]
+script = ExtResource("1_0g7tm")
+id = "Flying Machine"
+rarity = "Rare"
+image = ExtResource("40_o6uky")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_mib00"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Cage"
+rarity = "Rare"
+image = ExtResource("41_8uxxq")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_lwgac"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Hut"
+rarity = "Rare"
+image = ExtResource("42_foywv")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_wmvon"]
+script = ExtResource("1_0g7tm")
+id = "Hog Rider"
+rarity = "Rare"
+image = ExtResource("43_sokac")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_pap5x"]
+script = ExtResource("1_0g7tm")
+id = "Mini PEKKA"
+rarity = "Rare"
+image = ExtResource("44_dg280")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_i27gd"]
+script = ExtResource("1_0g7tm")
+id = "Musketeer"
+rarity = "Rare"
+image = ExtResource("45_a2ppn")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_r8e7g"]
+script = ExtResource("1_0g7tm")
+id = "Valkyrie"
+rarity = "Rare"
+image = ExtResource("46_c41tg")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_shsk5"]
+script = ExtResource("1_0g7tm")
+id = "Zappies"
+rarity = "Rare"
+image = ExtResource("47_55p8i")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_3c04r"]
+script = ExtResource("1_0g7tm")
+id = "Giant"
+rarity = "Rare"
+image = ExtResource("48_31s7d")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_nfgu5"]
+script = ExtResource("1_0g7tm")
+id = "Inferno Tower"
+rarity = "Rare"
+image = ExtResource("49_g2olq")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_mdfwg"]
+script = ExtResource("1_0g7tm")
+id = "Royal Hogs"
+rarity = "Rare"
+image = ExtResource("50_46p8d")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_k47g6"]
+script = ExtResource("1_0g7tm")
+id = "Wizard"
+rarity = "Rare"
+image = ExtResource("51_w500q")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_o2pma"]
+script = ExtResource("1_0g7tm")
+id = "Barbarian Hut"
+rarity = "Rare"
+image = ExtResource("52_i3bmx")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_osqjx"]
+script = ExtResource("1_0g7tm")
+id = "Elixir Collector"
+rarity = "Rare"
+image = ExtResource("53_n21q3")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_mo5a1"]
+script = ExtResource("1_0g7tm")
+id = "Rocket"
+rarity = "Rare"
+image = ExtResource("54_gnoci")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_0b2nx"]
+script = ExtResource("1_0g7tm")
+id = "Three Musketeers"
+rarity = "Rare"
+image = ExtResource("55_26f3x")
+elixir = "9"
+
+[sub_resource type="Resource" id="Resource_2g42m"]
+script = ExtResource("1_0g7tm")
+id = "Barbarian Barrel"
+rarity = "Epic"
+image = ExtResource("56_qb7ln")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_rg6nm"]
+script = ExtResource("1_0g7tm")
+id = "Rage"
+rarity = "Epic"
+image = ExtResource("57_mohhp")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_wdvtj"]
+script = ExtResource("1_0g7tm")
+id = "Wall Breakers"
+rarity = "Epic"
+image = ExtResource("58_hq48d")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_cpou2"]
+script = ExtResource("1_0g7tm")
+id = "Clone"
+rarity = "Epic"
+image = ExtResource("59_isy27")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_lkef8"]
+script = ExtResource("1_0g7tm")
+id = "Giards"
+rarity = "Epic"
+image = ExtResource("60_04io6")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_aqlrh"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Barrel"
+rarity = "Epic"
+image = ExtResource("61_byh4y")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_y6hxq"]
+script = ExtResource("1_0g7tm")
+id = "Skeleton Army"
+rarity = "Epic"
+image = ExtResource("62_ba3p3")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_q6nr3"]
+script = ExtResource("1_0g7tm")
+id = "Tornado"
+rarity = "Epic"
+image = ExtResource("63_6o2a7")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_hp4ig"]
+script = ExtResource("1_0g7tm")
+id = "Baby Dragon"
+rarity = "Epic"
+image = ExtResource("64_jhwuh")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_hesv7"]
+script = ExtResource("1_0g7tm")
+id = "Dark Prince"
+rarity = "Epic"
+image = ExtResource("65_7on8r")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_x1qch"]
+script = ExtResource("1_0g7tm")
+id = "Freeze"
+rarity = "Epic"
+image = ExtResource("66_ukch8")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_cttek"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Drill"
+rarity = "Epic"
+image = ExtResource("67_a8ape")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_qti34"]
+script = ExtResource("1_0g7tm")
+id = "Hunter"
+rarity = "Epic"
+image = ExtResource("68_w14ng")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_x5kcv"]
+script = ExtResource("1_0g7tm")
+id = "Poison"
+rarity = "Epic"
+image = ExtResource("69_6evoe")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_8apl7"]
+script = ExtResource("1_0g7tm")
+id = "Balloon"
+rarity = "Epic"
+image = ExtResource("70_urld2")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_o3acu"]
+script = ExtResource("1_0g7tm")
+id = "Bowler"
+rarity = "Epic"
+image = ExtResource("71_ax6fr")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_3quuu"]
+script = ExtResource("1_0g7tm")
+id = "Cannon Cart"
+rarity = "Epic"
+image = ExtResource("72_t24kn")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_0oj2m"]
+script = ExtResource("1_0g7tm")
+id = "Electro Dragon"
+rarity = "Epic"
+image = ExtResource("73_sern4")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_j11j2"]
+script = ExtResource("1_0g7tm")
+id = "Executioner"
+rarity = "Epic"
+image = ExtResource("74_yai1j")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_gbn6t"]
+script = ExtResource("1_0g7tm")
+id = "Prince"
+rarity = "Epic"
+image = ExtResource("75_tesul")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_pq5sv"]
+script = ExtResource("1_0g7tm")
+id = "Witch"
+rarity = "Epic"
+image = ExtResource("76_gj0wo")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_bcwiy"]
+script = ExtResource("1_0g7tm")
+id = "Giant Bomber"
+rarity = "Epic"
+image = ExtResource("77_afd2v")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_mkuot"]
+script = ExtResource("1_0g7tm")
+id = "Goblin Giant"
+rarity = "Epic"
+image = ExtResource("78_p3yu2")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_ppgga"]
+script = ExtResource("1_0g7tm")
+id = "Lightning"
+rarity = "Epic"
+image = ExtResource("79_16f40")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_kwofr"]
+script = ExtResource("1_0g7tm")
+id = "x-bow"
+rarity = "Epic"
+image = ExtResource("80_kutu2")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_b1tyw"]
+script = ExtResource("1_0g7tm")
+id = "Electro Giant"
+rarity = "Epic"
+image = ExtResource("81_lmt34")
+elixir = "7"
+
+[sub_resource type="Resource" id="Resource_64pcm"]
+script = ExtResource("1_0g7tm")
+id = "PEKKA"
+rarity = "Epic"
+image = ExtResource("82_jwcbq")
+elixir = "7"
+
+[sub_resource type="Resource" id="Resource_iw0wr"]
+script = ExtResource("1_0g7tm")
+id = "Golem"
+rarity = "Epic"
+image = ExtResource("83_ot0eu")
+elixir = "8"
+
+[sub_resource type="Resource" id="Resource_kpbep"]
+script = ExtResource("1_0g7tm")
+id = "Hog Rider Santa"
+rarity = "Legendary"
+image = ExtResource("84_6fbq8")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_o00vx"]
+script = ExtResource("1_0g7tm")
+id = "Ice Golem Super"
+rarity = "Legendary"
+image = ExtResource("85_ycaw7")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_x8brq"]
+script = ExtResource("1_0g7tm")
+id = "The Log"
+rarity = "Legendary"
+image = ExtResource("86_li1od")
+elixir = "2"
+
+[sub_resource type="Resource" id="Resource_s4w7c"]
+script = ExtResource("1_0g7tm")
+id = "Bandit"
+rarity = "Legendary"
+image = ExtResource("87_sl05f")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_y3pcn"]
+script = ExtResource("1_0g7tm")
+id = "Fisherman"
+rarity = "Legendary"
+image = ExtResource("88_1vdl3")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_tk6a2"]
+script = ExtResource("1_0g7tm")
+id = "Ice Wizard"
+rarity = "Legendary"
+image = ExtResource("89_gulp8")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_ad0uw"]
+script = ExtResource("1_0g7tm")
+id = "Miner"
+rarity = "Legendary"
+image = ExtResource("90_63adg")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_o5mae"]
+script = ExtResource("1_0g7tm")
+id = "Princess"
+rarity = "Legendary"
+image = ExtResource("91_hmat1")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_lbi2v"]
+script = ExtResource("1_0g7tm")
+id = "Royal Ghost"
+rarity = "Legendary"
+image = ExtResource("92_ux3bn")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_xjef6"]
+script = ExtResource("1_0g7tm")
+id = "Electro Wizard"
+rarity = "Legendary"
+image = ExtResource("93_8igmq")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_3t5q1"]
+script = ExtResource("1_0g7tm")
+id = "Inferno Dragon"
+rarity = "Legendary"
+image = ExtResource("94_tsg38")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_im7fp"]
+script = ExtResource("1_0g7tm")
+id = "Lumberjack"
+rarity = "Legendary"
+image = ExtResource("95_n4psl")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_w6siq"]
+script = ExtResource("1_0g7tm")
+id = "Magic Archer Super"
+rarity = "Legendary"
+image = ExtResource("96_qsh7l")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_ffmne"]
+script = ExtResource("1_0g7tm")
+id = "Magic Archer"
+rarity = "Legendary"
+image = ExtResource("97_c6xm8")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_7i3ru"]
+script = ExtResource("1_0g7tm")
+id = "Mini PEKKA Super"
+rarity = "Legendary"
+image = ExtResource("98_x0hyd")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_1a53x"]
+script = ExtResource("1_0g7tm")
+id = "Mother Witch"
+rarity = "Legendary"
+image = ExtResource("99_h1vd3")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_5ky4l"]
+script = ExtResource("1_0g7tm")
+id = "Night Witch"
+rarity = "Legendary"
+image = ExtResource("100_ctj6h")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_0ghd6"]
+script = ExtResource("1_0g7tm")
+id = "Graveyard"
+rarity = "Legendary"
+image = ExtResource("101_3d8l8")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_v8dc3"]
+script = ExtResource("1_0g7tm")
+id = "Ram Rider"
+rarity = "Legendary"
+image = ExtResource("102_2bcef")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_oocuf"]
+script = ExtResource("1_0g7tm")
+id = "Sparky"
+rarity = "Legendary"
+image = ExtResource("103_77olj")
+elixir = "6"
+
+[sub_resource type="Resource" id="Resource_uj6ix"]
+script = ExtResource("1_0g7tm")
+id = "Lava Hound"
+rarity = "Legendary"
+image = ExtResource("104_sxfeu")
+elixir = "7"
+
+[sub_resource type="Resource" id="Resource_1sibq"]
+script = ExtResource("1_0g7tm")
+id = "Mega Knight"
+rarity = "Legendary"
+image = ExtResource("105_5dorc")
+elixir = "7"
+
+[sub_resource type="Resource" id="Resource_bvjmx"]
+script = ExtResource("1_0g7tm")
+id = "Little_Prince"
+rarity = "Champion"
+image = ExtResource("106_3m7qh")
+elixir = "3"
+
+[sub_resource type="Resource" id="Resource_ebwvf"]
+script = ExtResource("1_0g7tm")
+id = "Golden Knight"
+rarity = "Champion"
+image = ExtResource("107_b86dp")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_okk53"]
+script = ExtResource("1_0g7tm")
+id = "Mighty Miner"
+rarity = "Champion"
+image = ExtResource("108_ifj7e")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_87jsy"]
+script = ExtResource("1_0g7tm")
+id = "Skeleton King"
+rarity = "Champion"
+image = ExtResource("109_8k47j")
+elixir = "4"
+
+[sub_resource type="Resource" id="Resource_uj6ab"]
+script = ExtResource("1_0g7tm")
+id = "Archer Queen"
+rarity = "Champion"
+image = ExtResource("110_poonn")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_yo2s7"]
+script = ExtResource("1_0g7tm")
+id = "Goblinstein"
+rarity = "Champion"
+image = ExtResource("111_ea3o2")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_awext"]
+script = ExtResource("1_0g7tm")
+id = "Monk"
+rarity = "Champion"
+image = ExtResource("112_gvyl7")
+elixir = "5"
+
+[sub_resource type="Resource" id="Resource_c7oxb"]
+script = ExtResource("1_0g7tm")
+id = "Boss_Bandit"
+rarity = "Champion"
+image = ExtResource("113_chxeh")
+elixir = "6"
+
+[resource]
+script = ExtResource("1_mfrui")
+cards = Array[ExtResource("1_0g7tm")]([SubResource("Resource_icsej"), SubResource("Resource_oa02x"), SubResource("Resource_lyicf"), SubResource("Resource_dd6ro"), SubResource("Resource_6453q"), SubResource("Resource_cchol"), SubResource("Resource_opt76"), SubResource("Resource_p2jlo"), SubResource("Resource_apai1"), SubResource("Resource_ucick"), SubResource("Resource_s3nf7"), SubResource("Resource_n45es"), SubResource("Resource_lea74"), SubResource("Resource_r7prr"), SubResource("Resource_7036s"), SubResource("Resource_fykmi"), SubResource("Resource_fnfkb"), SubResource("Resource_dna3p"), SubResource("Resource_3730u"), SubResource("Resource_rw4uv"), SubResource("Resource_w2hi2"), SubResource("Resource_g0nok"), SubResource("Resource_thksj"), SubResource("Resource_wwig0"), SubResource("Resource_ei1d1"), SubResource("Resource_wbuf5"), SubResource("Resource_tdpwq"), SubResource("Resource_fijbu"), SubResource("Resource_npgkl"), SubResource("Resource_im7y2"), SubResource("Resource_njkqe"), SubResource("Resource_qa2b7"), SubResource("Resource_jedvn"), SubResource("Resource_462fi"), SubResource("Resource_lttra"), SubResource("Resource_h3fdx"), SubResource("Resource_b16k1"), SubResource("Resource_d8ojj"), SubResource("Resource_uqdrn"), SubResource("Resource_mib00"), SubResource("Resource_lwgac"), SubResource("Resource_wmvon"), SubResource("Resource_pap5x"), SubResource("Resource_i27gd"), SubResource("Resource_r8e7g"), SubResource("Resource_shsk5"), SubResource("Resource_3c04r"), SubResource("Resource_nfgu5"), SubResource("Resource_mdfwg"), SubResource("Resource_k47g6"), SubResource("Resource_o2pma"), SubResource("Resource_osqjx"), SubResource("Resource_mo5a1"), SubResource("Resource_0b2nx"), SubResource("Resource_2g42m"), SubResource("Resource_rg6nm"), SubResource("Resource_wdvtj"), SubResource("Resource_cpou2"), SubResource("Resource_lkef8"), SubResource("Resource_aqlrh"), SubResource("Resource_y6hxq"), SubResource("Resource_q6nr3"), SubResource("Resource_hp4ig"), SubResource("Resource_hesv7"), SubResource("Resource_x1qch"), SubResource("Resource_cttek"), SubResource("Resource_qti34"), SubResource("Resource_x5kcv"), SubResource("Resource_8apl7"), SubResource("Resource_o3acu"), SubResource("Resource_3quuu"), SubResource("Resource_0oj2m"), SubResource("Resource_j11j2"), SubResource("Resource_gbn6t"), SubResource("Resource_pq5sv"), SubResource("Resource_bcwiy"), SubResource("Resource_mkuot"), SubResource("Resource_ppgga"), SubResource("Resource_kwofr"), SubResource("Resource_b1tyw"), SubResource("Resource_64pcm"), SubResource("Resource_iw0wr"), SubResource("Resource_kpbep"), SubResource("Resource_o00vx"), SubResource("Resource_x8brq"), SubResource("Resource_s4w7c"), SubResource("Resource_y3pcn"), SubResource("Resource_tk6a2"), SubResource("Resource_ad0uw"), SubResource("Resource_o5mae"), SubResource("Resource_lbi2v"), SubResource("Resource_xjef6"), SubResource("Resource_3t5q1"), SubResource("Resource_im7fp"), SubResource("Resource_w6siq"), SubResource("Resource_ffmne"), SubResource("Resource_7i3ru"), SubResource("Resource_1a53x"), SubResource("Resource_5ky4l"), SubResource("Resource_0ghd6"), SubResource("Resource_v8dc3"), SubResource("Resource_oocuf"), SubResource("Resource_uj6ix"), SubResource("Resource_1sibq"), SubResource("Resource_bvjmx"), SubResource("Resource_ebwvf"), SubResource("Resource_okk53"), SubResource("Resource_87jsy"), SubResource("Resource_uj6ab"), SubResource("Resource_yo2s7"), SubResource("Resource_awext"), SubResource("Resource_c7oxb")])
